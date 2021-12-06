@@ -53,13 +53,14 @@ console.log(calledMe)
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
 
-let dice  
+let dice  = function(){
 
-dice = Math.floor(Math.random()*6)
-
-console.log(1 + dice)
+return Math.floor(Math.random()*6);
 
 
+}
+
+dice()
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
@@ -154,10 +155,41 @@ whatDayIsIt()
     }
 */
 
+console.log("------------------------roll the dices-------------------------")
+let rollTheDices = function(numberOfDices){
+
+
+    let result = {
+        sum : 0,
+        values : [],
+    }
+
+    for (let i = 0; i < numberOfDices; i++) {
+        let diceRoll = dice();
+        result.sum += diceRoll;
+        result.values.push(diceRoll);
+      }
+
+      return result;
+}
+
+console.log(rollTheDices(10))
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
 
+
+console.log("------------------------how many days-------------------------")
+let howManyDays = function(selectedDate) {
+ 
+    let today = new Date()
+
+    let difference = today - selectedDate
+    return difference / (1000 * 60 *60 * 24)
+    
+}
+
+console.log(howManyDays( 2021,5,11))
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
