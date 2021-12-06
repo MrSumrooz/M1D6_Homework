@@ -121,20 +121,28 @@ onlyLetters("I love these 6 dogs")
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+console.log("----------------------------------------------------")
+const isThisAnEmail = (email) => {
+    let valid = /\S+@\S+\.\S+/;
+    return valid.test(email);
+}
 
-
+console.log(isThisAnEmail('Sumrooz.zi.com'));
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
-
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let whatDayIsIt = function(){
 
-     let day = day.getDay();
-    return day
+    const day1 = new Date();
+    let day = weekday[day1.getDay()];
+    console.log(day)
 }
 
+
 whatDayIsIt()
+
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
