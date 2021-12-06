@@ -80,26 +80,61 @@ whoIsBigger(5,3)
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-let splitMe
+let splitMe = function(str){
 
+    console.log(str.split(" "))
+}
+splitMe("i love strive")
+console.log("---------------------------------------")
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+
+
+let deleteOne = function(str,boolean){
+
+    if (boolean === false ){
+       
+        console.log(str.slice(1));
+    }else{
+        console.log(str.slice (0,str.length-1))
+    }
+
+}
+deleteOne("Strive",true)
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 
+
+let onlyLetters = function(str){
+
+    console.log(str.replace(/[0-9]/g,""))
+
+
+}
+
+onlyLetters("I love these 6 dogs")
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+
+
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
 
+let whatDayIsIt = function(){
+
+     let day = day.getDay();
+    return day
+}
+
+whatDayIsIt()
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
